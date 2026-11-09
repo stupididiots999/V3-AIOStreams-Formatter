@@ -99,6 +99,11 @@ https://pastebin.com/raw/n2WPg8Sf
 ### Secondary Method: Direct File Import
 Download the [formatter.json](formatter.json) file from this repository to automatically apply all the formatting for you!
 
+**How To:** Click on the **formatter.json** above and then hit the download button in the top right corner..
+<br>
+<img src="step0.png" width="60%" />
+<br><br>
+
 **Step 1:** Open your AIOStreams settings and click on **Formatter** in the left sidebar.
 <br>
 <img src="step1.png" width="60%" />
