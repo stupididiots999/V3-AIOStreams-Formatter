@@ -56,33 +56,11 @@ The description automatically shows the raw filename (`📄 {stream.filename}`) 
 
 ---
 
-## 🔗 Installation & Direct Links
+## 🔗 Installation
 
 There are three ways to apply this formatting to your AIOStreams setup:
 
-### Option 1: Direct File Import (Easiest)
-Download the **`formatter.json`** file from this repository to automatically apply all the formatting for you!
-
-* 📁 **Download:** [`formatter.json`](./formatter.json) *(Click to open, then click the download button in the top right, or right-click the Raw button and "Save link as...")*
-
-**Step 1:** Open your AIOStreams settings and click on **Formatter** in the left sidebar.
-<br>
-<img src="1000715661.png" width="60%" />
-<br><br>
-
-**Step 2:** Look for the two small icons under the template boxes. Click the **Import** icon (the one with the arrow pointing *into* the file).
-<br>
-<img src="1000715662.png" width="60%" />
-<br><br>
-
-**Step 3:** Click **Import from File** and select the `formatter.json` file you downloaded. Everything will instantly populate!
-<br>
-<img src="1000715663.png" width="60%" />
-<br><br>
-
----
-
-### Option 2: Copy & Paste
+### Main Method: Copy & Paste
 Copy the large text blocks below and manually paste them into the Name and Description fields in AIOStreams. *(You can also view the raw `.txt` files in this repository to copy them without formatting!)*
 
 **Name Template:**
@@ -104,8 +82,7 @@ Copy the large text blocks below and manually paste them into the Name and Descr
 
 <br>
 
-### Option 3: Use Pastebin Links
-You can enter these links directly into your AIOStreams configuration boxes:
+### Alternative Method: Pastebin Links
 
 [![Name Template Pastebin](https://img.shields.io/badge/Pastebin-Name_Template-blue.svg?style=for-the-badge)](https://pastebin.com/raw/XPehQTCV) 
 ```text
@@ -116,6 +93,28 @@ https://pastebin.com/raw/XPehQTCV
 ```text
 https://pastebin.com/raw/n2WPg8Sf
 ```
+
+---
+
+### Secondary Method: Direct File Import
+Download the **`formatter.json`** file from this repository to automatically apply all the formatting for you!
+
+* 📁 **Download:** [Right-click here and select "Save link as..."](https://raw.githubusercontent.com/stupididiots999/V3-AIOStreams-Formatter/main/formatter.json) *(If you left-click, it will open the plain text file in your browser—just right-click anywhere on that page and click "Save as..." to save the .json file to your device!)*
+
+**Step 1:** Open your AIOStreams settings and click on **Formatter** in the left sidebar.
+<br>
+<img src="1000715661.png" width="60%" />
+<br><br>
+
+**Step 2:** Look for the two small icons under the template boxes. Click the **Import** icon (the one with the arrow pointing *into* the file).
+<br>
+<img src="1000715662.png" width="60%" />
+<br><br>
+
+**Step 3:** Click **Import from File** and select the `formatter.json` file you downloaded. Everything will instantly populate!
+<br>
+<img src="1000715663.png" width="60%" />
+<br><br>
 
 ---
 
