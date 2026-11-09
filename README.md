@@ -123,19 +123,6 @@ Copy the large text blocks below and manually paste them into the Name Template 
 
 <br>
 
----
-
-### Pastebin Links: (*redundant links*)
-
-[![Name Template Pastebin](https://img.shields.io/badge/Pastebin-Name_Template-blue.svg?style=for-the-badge)](https://pastebin.com/raw/XPehQTCV) 
-```text
-https://pastebin.com/raw/XPehQTCV
-```
-
-[![Description Template Pastebin](https://img.shields.io/badge/Pastebin-Description_Template-blue.svg?style=for-the-badge)](https://pastebin.com/raw/n2WPg8Sf)
-```text
-https://pastebin.com/raw/n2WPg8Sf
-```
 
 ---
 
@@ -184,3 +171,17 @@ https://torbox.app/subscription?referral=58849a2c-cef3-41aa-8f4e-5cd3678a73c8
 Looking for the older versions? 
 * [V2 Reddit Release](https://www.reddit.com/r/aiostreams/s/57tEjA2kR5)
 * [V1 Reddit Release](https://www.reddit.com/r/aiostreams/s/D9z3NAocUP)
+
+---
+
+### Pastebin Links for V3: (*V3 redundant links*)
+
+[![Name Template Pastebin](https://img.shields.io/badge/Pastebin-Name_Template-blue.svg?style=for-the-badge)](https://pastebin.com/raw/XPehQTCV) 
+```text
+https://pastebin.com/raw/XPehQTCV
+```
+
+[![Description Template Pastebin](https://img.shields.io/badge/Pastebin-Description_Template-blue.svg?style=for-the-badge)](https://pastebin.com/raw/n2WPg8Sf)
+```text
+https://pastebin.com/raw/n2WPg8Sf
+```
