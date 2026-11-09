@@ -128,7 +128,7 @@ Copy the large text blocks below and manually paste them into the Name Template 
 ### Secondary Method: Direct File Import
 Download the [formatter.json](formatter.json) file from this repository to automatically apply all the formatting for you!
 
-**How To:** Click on the **formatter.json** above and then hit the download button in the top right corner..
+**How To:** Click on the **formatter.json** above and then hit the download button in the top right corner.
 <br>
 <img src="step0.png" width="60%" />
 <br><br>
