@@ -103,17 +103,17 @@ Download the **`formatter.json`** file from this repository to automatically app
 
 **Step 1:** Open your AIOStreams settings and click on **Formatter** in the left sidebar.
 <br>
-<img src="1000715661.png" width="60%" />
+<img src="step1.png" width="60%" />
 <br><br>
 
 **Step 2:** Look for the two small icons under the template boxes. Click the **Import** icon (the one with the arrow pointing *into* the file).
 <br>
-<img src="1000715662.png" width="60%" />
+<img src="step2.png" width="60%" />
 <br><br>
 
 **Step 3:** Click **Import from File** and select the `formatter.json` file you downloaded. Everything will instantly populate!
 <br>
-<img src="1000715663.png" width="60%" />
+<img src="step3.png" width="60%" />
 <br><br>
 
 ---
