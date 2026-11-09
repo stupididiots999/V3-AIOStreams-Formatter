@@ -28,6 +28,35 @@
 
 ---
 
+## 🎨 Emoji & Tag Reference
+
+### 🏷️ Name Template Tags
+
+| Category | Output Format & Emojis | Smart Logic / Behavior |
+| :--- | :--- | :--- |
+| **Resolutions** | `🍿 4K` · `🎟️ 1440p` · `🎫 1080p` · `🖥️ 720p` · `💿 576p` · `📺 480p` · `📼 360p` · `🧱 240p` · `🥔 144p` · `❓ Unknown` | Converts `2160p` to `🍿 4K`; falls back to `❓ Unknown` if missing |
+| **HDR Hierarchy** | `🌈 DV` **>** `🎆 HDR10+` **>** `🎨 HDR` | Deduplicates tags so only the highest dynamic range format displays |
+| **IMAX & Formats** | `👁️ IMAX` · `🖼️ Open Matte` · `👓 3D` · `🤖 AI` | Displays `👁️ IMAX` from visual tags and strips duplicates from editions |
+| **Bit Depth** | `🖍️ 10bit` | **SDR-only** — automatically hidden when `🌈 DV` or `🎨 HDR` is present |
+| **Cuts & Editions** | `🎬 Director` · `🎞️ Extended` · `📽️ Theatrical` · `🪄 Remastered` · `📚 Collector` · `🎉 Anniversary Edition` | Normalizes naming variations (e.g., *Director's Cut* → `🎬 Director`) |
+| **Release Flags** | `✂️ Uncut` · `😈 Unrated` · `🌶️ Uncensored` · `🖌️ Regraded` | Scans edition tags and stream flags; strips `Color Corrected` |
+
+### 📝 Description Template Layout
+
+| Line | Template Output | Included Metadata |
+| :--- | :--- | :--- |
+| **Line 1** | `🎬 Title (Year) 🍂 S01 📼 E01` | Stream Title, Release Year, Formatted Seasons & Episodes |
+| **Line 2** | `📀 Quality ⚙️ Encode ⏱️ Duration` | Source Quality (BluRay, WEB-DL), Codec (HEVC, AV1), Runtime |
+| **Line 3** | `🎶 Audio 🔊 Channels 🗣️ Lang 💬 Subs` | Audio Formats (`\|` separated), Channels, Audio & Subtitle Flag Emojis |
+| **Line 4** | `💾 Size 📁 Folder 📊 Bitrate 🌱 Seeds 🕰️ Age` | File/Folder Size, Bitrate, Seeders (P2P/Uncached), Post Age (Usenet) |
+| **Line 5** | `🏷️ Group 📡 Indexer 🎭 Network` | Release Group, Indexer Name, Broadcast/Streaming Network |
+| **Line 6** | `⚡ Ready (Service) 📌 Library 🔗 Type 🧩 Addon` | Cache (`⚡ Ready` / `❌ Not Ready`), Type (`☁️ Usenet`, `🔗 P2P`, `🌍 Web Link`, `🟥 Youtube`, `📡 Live`), `🛡️ Proxied`, `🕵️ Private`, Addon |
+| **Line 7–8** | `💡 Message` / `📄 Filename` | Addon Message & Smart Filename Fallback (`🤖 AI` or `❓ Unknown` res) |
+
+---
+
+
+
 ## 🏷️ Name Template Changes in V3
 
 ### 🧠 Smart 10-bit Logic
