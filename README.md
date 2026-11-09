@@ -94,12 +94,12 @@ Copy the large text blocks below and manually paste them into the Name Template 
 
 **Step 1:** Open your AIOStreams settings and click on **Formatter** in the left sidebar.
 <br>
-<img src="step1.png" width="60%" />
+<img src="step 1.png" width="60%" />
 <br><br>
 
 **Step 2:** Click on the drop down menu and select **Custom**.
 <br>
-<img src="step2.png" width="60%" />
+<img src="step 2.png" width="60%" />
 <br><br>
 
 **Name Template:**
