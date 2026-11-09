@@ -90,7 +90,7 @@ The description automatically shows the raw filename (`📄 {stream.filename}`) 
 There are three ways to apply this formatting to your AIOStreams setup:
 
 ### Main Method: Copy & Paste
-Copy the large text blocks below and manually paste them into the Name and Description fields in AIOStreams. *(You can also view the raw `.txt` files in this repository to copy them without formatting!)*
+Copy the large text blocks below and manually paste them into the Name Template and Description Template fields in AIOStreams formatter page.
 
 **Name Template:**
 ```text
