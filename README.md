@@ -82,7 +82,7 @@ Copy the large text blocks below and manually paste them into the Name and Descr
 
 <br>
 
-### Alternative Method: Pastebin Links
+### Pastebin Links:
 
 [![Name Template Pastebin](https://img.shields.io/badge/Pastebin-Name_Template-blue.svg?style=for-the-badge)](https://pastebin.com/raw/XPehQTCV) 
 ```text
@@ -97,9 +97,7 @@ https://pastebin.com/raw/n2WPg8Sf
 ---
 
 ### Secondary Method: Direct File Import
-Download the **`formatter.json`** file from this repository to automatically apply all the formatting for you!
-
-* 📁 **Download:** [Right-click here and select "Save link as..."](https://raw.githubusercontent.com/stupididiots999/V3-AIOStreams-Formatter/main/formatter.json) *(If you left-click, it will open the plain text file in your browser—just right-click anywhere on that page and click "Save as..." to save the .json file to your device!)*
+Download the [formatter.json](formatter.json) file from this repository to automatically apply all the formatting for you!
 
 **Step 1:** Open your AIOStreams settings and click on **Formatter** in the left sidebar.
 <br>
