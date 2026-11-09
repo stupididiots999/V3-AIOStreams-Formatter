@@ -56,13 +56,21 @@ The description now automatically shows the raw filename (`📄 {stream.filename
 
 ## 🔗 Links & Installation
 
-To use this formatting, copy and paste the code directly into your AIOStreams settings, or use the Pastebin raw links provided below.
+### 📥 Option 1: Direct Import (Recommended)
+The easiest way to use this format is to download the fully configured JSON file and import it straight into AIOStreams. 
+* 📁 **Download:** [`formatter.json`](./formatter.json) *(Click to open, then click the download button in the top right, or right-click the Raw button and "Save link as...")*
+* **To Install:** Open your AIOStreams configuration page, find the Formatter section, and click **Import** to upload this file.
+
+<br>
+
+### 📋 Option 2: Copy & Paste / Pastebin Links
+Alternatively, you can copy and paste the code below directly into your AIOStreams settings, or use the Pastebin raw links.
 
 **Name Template:**
 ```text
 {stream.resolution::exists["{stream.resolution::replace('2160p', '🍿 4K')::replace('1440p','🎟️ 1440p')::replace('1080p','🎫 1080p')::replace('720p','🖥️ 720p')::replace('576p','💿 576p')::replace('480p','📺 480p')::replace('360p','📼 360p')::replace('240p','🧱 240p')::replace('144p','🥔 144p')}"||"❓ Unknown"]}{stream.visualTags::exists["{stream.visualTags::join('')::replace('HDR Color Corrected', 'HDR')::replace('HDRColor Corrected', 'HDR')::replace('Color Corrected', '')::replace('ColorCorrected', '')::replace('10bit', '')::replace('HDR10+', 'HTENP')::replace('HDR10', 'HDR')::replace('HDRHDR', 'HDR')::replace('HTENPHDR', 'HTENP')::replace('HDRHTENP', 'HTENP')::replace('DVHTENP', 'DV')::replace('HTENPDV', 'DV')::replace('DVHDR', 'DV')::replace('HDRDV', 'DV')::replace('SDR', '')::replace('HDR', ' • 🎨 HDR')::replace('HTENP', ' • 🎆 HDR10+')::replace('DV', ' • 🌈 DV')::replace('AI', ' • 🤖 AI')::replace('IMAX', ' • 👁️ IMAX')::replace('3D', ' • 👓 3D')}"||""]}{stream.visualTags::~HDR::or::stream.visualTags::~DV::and::stream.visualTags::~10bit::xor::stream.visualTags::~10bit[" • 🖍️ 10bit"||""]}{stream.editions::exists["{stream.editions::join('')::replace('Color Corrected', '')::replace('ColorCorrected', '')::replace('IMAX', '')::replace('Remastered', 'REMASTERED')::replace('Collectors Edition', 'COLLECTOR')::replace('Collector', 'COLLECTOR')::replace('Anniversary Edition', 'ANNIV')::replace('Anniversary', 'ANNIV')::replace('Extended Edition', 'EXTCUT')::replace('Extended', 'EXTCUT')::replace('Theatrical Cut', 'THEATCUT')::replace('Theatrical', 'THEATCUT')::replace('Directors Cut', 'DIRCUT')::replace('Director', 'DIRCUT')::replace('Uncut', 'UNCUT')::replace('Unrated', 'UNRATED')::replace('Uncensored', 'UNCENS')::replace('COLLECTOR', ' • 📚 Collector')::replace('ANNIV', ' • 🎉 Anniversary Edition')::replace('EXTCUT', ' • 🎞️ Extended')::replace('THEATCUT', ' • 📽️ Theatrical')::replace('DIRCUT', ' • 🎬 Director')::replace('UNCUT', ' • ✂️ Uncut')::replace('UNRATED', ' • 😈 Unrated')::replace('UNCENS', ' • 🌶️ Uncensored')::replace('REMASTERED', ' • 🪄 Remastered')}"||""]}{stream.regraded::istrue[" • 🖌️ Regraded"||""]}{stream.uncensored::istrue[" • 🌶️ Uncensored"||""]}{stream.unrated::istrue[" • 😈 Unrated"||""]}{stream.folderName::~Open Matte::or::stream.folderName::~Open.Matte::or::stream.folderName::~OpenMatte::or::stream.folderName::~open matte::or::stream.folderName::~open.matte::or::stream.folderName::~openmatte::or::stream.filename::~Open Matte::or::stream.filename::~Open.Matte::or::stream.filename::~OpenMatte::or::stream.filename::~open matte::or::stream.filename::~open.matte::or::stream.filename::~openmatte[" • 🖼️ Open Matte"||""]}
 ```
-🔗 **Raw Link:** `https://pastebin.com/raw/XPehQTCV`
+🔗 **[Name Template Raw Link](https://pastebin.com/raw/XPehQTCV)** - https://pastebin.com/raw/XPehQTCV
 
 <br>
 
@@ -77,7 +85,7 @@ To use this formatting, copy and paste the code directly into your AIOStreams se
 {stream.message::exists["💡 {stream.message}"||""]}
 {stream.resolution::exists[""||"📄 {stream.filename}"]}{stream.visualTags::~AI["📄 {stream.filename}"||""]}
 ```
-🔗 **Raw Link:** `https://pastebin.com/raw/n2WPg8Sf`
+🔗 **[Description Template Raw Link](https://pastebin.com/raw/n2WPg8Sf)** - https://pastebin.com/raw/n2WPg8Sf
 
 *(Note: For parity and offline viewing, the raw unformatted text for these templates is also available as `.txt` files directly in this repository.)*
 
@@ -87,7 +95,7 @@ To use this formatting, copy and paste the code directly into your AIOStreams se
 
 If you found this helpful or useful, I would really appreciate it if you used my Torbox referral link/code! 😊
 
-🔗 **[Torbox Referral Link](https://torbox.app/subscription?referral=58849a2c-cef3-41aa-8f4e-5cd3678a73c8)**
+🔗 **[Torbox Referral Link](https://torbox.app/subscription?referral=58849a2c-cef3-41aa-8f4e-5cd3678a73c8)** - https://torbox.app/subscription?referral=58849a2c-cef3-41aa-8f4e-5cd3678a73c8
 
 **Referral Code:** 
 ```text
