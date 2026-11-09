@@ -83,6 +83,7 @@ The description automatically shows the raw filename (`📄 {stream.filename}`) 
 1. **For "AI" Releases:** "AI" is a broad term—it could mean AI-upscaled, AI 60fps interpolation, or an AI-generated Open Matte. Printing the filename is the easiest way to let you see exactly what you are clicking on.
 2. **For Unknown Resolutions:** When a file is missing a resolution tag, the filename often holds the missing visual clues (like DV or HDR). Glancing at the raw filename for those clues lets you safely conclude it must be a 4K release.
 
+
 ---
 
 ## 🔗 Installation
@@ -120,9 +121,7 @@ Copy the large text blocks below and manually paste them into the Name Template 
 {stream.message::exists["💡 {stream.message}"||""]}
 {stream.resolution::exists[""||"📄 {stream.filename}"]}{stream.visualTags::~AI["📄 {stream.filename}"||""]}
 ```
-
 <br>
-
 
 ---
 
@@ -174,14 +173,10 @@ Looking for the older versions?
 
 ---
 
-### Pastebin Links for V3: (*V3 redundant links*)
+### Redundant Links:
+
+* [V3 Reddit Release](https://www.reddit.com/r/aiostreams/s/5uUVvvzxMC)
 
 [![Name Template Pastebin](https://img.shields.io/badge/Pastebin-Name_Template-blue.svg?style=for-the-badge)](https://pastebin.com/raw/XPehQTCV) 
-```text
-https://pastebin.com/raw/XPehQTCV
-```
 
 [![Description Template Pastebin](https://img.shields.io/badge/Pastebin-Description_Template-blue.svg?style=for-the-badge)](https://pastebin.com/raw/n2WPg8Sf)
-```text
-https://pastebin.com/raw/n2WPg8Sf
-```
