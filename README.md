@@ -88,7 +88,7 @@ The description automatically shows the raw filename (`📄 {stream.filename}`) 
 
 ## 🔗 Installation
 
-There are three ways to apply this formatting to your AIOStreams setup:
+There are two ways to apply this formatting to your AIOStreams setup:
 
 ### Main Method: Copy & Paste
 Copy the large text blocks below and manually paste them into the Name Template and Description Template fields in AIOStreams formatter page.
