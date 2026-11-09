@@ -123,7 +123,9 @@ Copy the large text blocks below and manually paste them into the Name Template 
 
 <br>
 
-### Pastebin Links:
+---
+
+### Pastebin Links:(*redundant links*)
 
 [![Name Template Pastebin](https://img.shields.io/badge/Pastebin-Name_Template-blue.svg?style=for-the-badge)](https://pastebin.com/raw/XPehQTCV) 
 ```text
