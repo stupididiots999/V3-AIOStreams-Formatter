@@ -125,7 +125,7 @@ Copy the large text blocks below and manually paste them into the Name Template 
 
 ---
 
-### Pastebin Links:(*redundant links*)
+### Pastebin Links: (*redundant links*)
 
 [![Name Template Pastebin](https://img.shields.io/badge/Pastebin-Name_Template-blue.svg?style=for-the-badge)](https://pastebin.com/raw/XPehQTCV) 
 ```text
@@ -164,7 +164,7 @@ Download the [formatter.json](formatter.json) file from this repository to autom
 
 ---
 
-## 🙏 Support & Previous Versions
+## 🙏 Support
 
 If you found this helpful or useful, I would really appreciate it if you used my Torbox referral link/code! 😊
 
@@ -180,7 +180,7 @@ https://torbox.app/subscription?referral=58849a2c-cef3-41aa-8f4e-5cd3678a73c8
 58849a2c-cef3-41aa-8f4e-5cd3678a73c8
 ```
 
-### 🕰️ History
+### 🕰️ Previous Versions
 Looking for the older versions? 
 * [V2 Reddit Release](https://www.reddit.com/r/aiostreams/s/57tEjA2kR5)
 * [V1 Reddit Release](https://www.reddit.com/r/aiostreams/s/D9z3NAocUP)
