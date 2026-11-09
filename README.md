@@ -6,7 +6,7 @@
 ![Platform](https://img.shields.io/badge/platform-AIOStreams-success.svg?style=for-the-badge)
 ![Status](https://img.shields.io/badge/status-active-success.svg?style=for-the-badge)
 
-*A cleaner, smarter V3 AIOStreams custom formatter. Automatically hides redundant tags, detects Open Matte & special editions, fixes double-spacing, and smartly displays filenames for AI or unknown streams.*
+*A cleaner, smarter, minimalistic AIOStreams formatter with emojis. Automatically detects Open Matte & special editions, hides redundant tags and smartly displays filenames for AI/unknown streams.*
 
 </div>
 
