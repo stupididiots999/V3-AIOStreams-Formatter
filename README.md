@@ -28,7 +28,7 @@
 
 ---
 
-## 🏷️ Name Template Changes
+## 🏷️ Name Template Changes in V3
 
 ### 🧠 Smart 10-bit Logic
 The `10bit` tag (🖍️) is now dynamically hidden if HDR or Dolby Vision is already detected. It will only display for 10-bit SDR files, keeping your titles uncluttered and avoiding redundant information.
@@ -44,7 +44,7 @@ Added advanced detection and custom emojis for several missing editions: 🪄 **
 
 ---
 
-## 📝 Description Template Changes
+## 📝 Description Template Changes in V3
 
 ### 📉 Decluttered Title Line
 Completely removed the Seadex and RSE tiering logic (🎚️ Best, T1-T8). The top line now strictly focuses on the **Title**, **Year**, **Seasons**, and **Episodes** for a much cleaner, easier-to-read look.
