@@ -103,7 +103,7 @@ Copy the large text blocks below and manually paste them into the Name Template 
 <img src="step 2.png" width="60%" />
 <br><br>
 
-**Step 3:** Copy Paste into respective fields 
+**Step 3:** Copy and paste the templates below into their respective fields: 
 
 **Name Template:**
 ```text
@@ -173,7 +173,7 @@ Looking for the older versions?
 
 ---
 
-### Redundant Links:
+### 🔗 Mirror Links:
 
 * [V3 Reddit Release](https://www.reddit.com/r/aiostreams/s/5uUVvvzxMC)
 
