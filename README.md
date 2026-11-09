@@ -42,11 +42,6 @@ Redundant text like "Color Corrected" is automatically filtered out. Hardcoded s
 ### 🎬 Expanded Edition Tags
 Added advanced detection and custom emojis for several missing editions: 🪄 **Remastered** | 📚 **Collector’s** | 🎉 **Anniversary** | ✂️ **Uncut** | 😈 **Unrated** | 🌶️ **Uncensored**
 
-#### Name Template Code (Copy & Paste):
-```text
-{stream.resolution::exists["{stream.resolution::replace('2160p', '🍿 4K')::replace('1440p','🎟️ 1440p')::replace('1080p','🎫 1080p')::replace('720p','🖥️ 720p')::replace('576p','💿 576p')::replace('480p','📺 480p')::replace('360p','📼 360p')::replace('240p','🧱 240p')::replace('144p','🥔 144p')}"||"❓ Unknown"]}{stream.visualTags::exists["{stream.visualTags::join('')::replace('HDR Color Corrected', 'HDR')::replace('HDRColor Corrected', 'HDR')::replace('Color Corrected', '')::replace('ColorCorrected', '')::replace('10bit', '')::replace('HDR10+', 'HTENP')::replace('HDR10', 'HDR')::replace('HDRHDR', 'HDR')::replace('HTENPHDR', 'HTENP')::replace('HDRHTENP', 'HTENP')::replace('DVHTENP', 'DV')::replace('HTENPDV', 'DV')::replace('DVHDR', 'DV')::replace('HDRDV', 'DV')::replace('SDR', '')::replace('HDR', ' • 🎨 HDR')::replace('HTENP', ' • 🎆 HDR10+')::replace('DV', ' • 🌈 DV')::replace('AI', ' • 🤖 AI')::replace('IMAX', ' • 👁️ IMAX')::replace('3D', ' • 👓 3D')}"||""]}{stream.visualTags::~HDR::or::stream.visualTags::~DV::and::stream.visualTags::~10bit::xor::stream.visualTags::~10bit[" • 🖍️ 10bit"||""]}{stream.editions::exists["{stream.editions::join('')::replace('Color Corrected', '')::replace('ColorCorrected', '')::replace('IMAX', '')::replace('Remastered', 'REMASTERED')::replace('Collectors Edition', 'COLLECTOR')::replace('Collector', 'COLLECTOR')::replace('Anniversary Edition', 'ANNIV')::replace('Anniversary', 'ANNIV')::replace('Extended Edition', 'EXTCUT')::replace('Extended', 'EXTCUT')::replace('Theatrical Cut', 'THEATCUT')::replace('Theatrical', 'THEATCUT')::replace('Directors Cut', 'DIRCUT')::replace('Director', 'DIRCUT')::replace('Uncut', 'UNCUT')::replace('Unrated', 'UNRATED')::replace('Uncensored', 'UNCENS')::replace('COLLECTOR', ' • 📚 Collector')::replace('ANNIV', ' • 🎉 Anniversary Edition')::replace('EXTCUT', ' • 🎞️ Extended')::replace('THEATCUT', ' • 📽️ Theatrical')::replace('DIRCUT', ' • 🎬 Director')::replace('UNCUT', ' • ✂️ Uncut')::replace('UNRATED', ' • 😈 Unrated')::replace('UNCENS', ' • 🌶️ Uncensored')::replace('REMASTERED', ' • 🪄 Remastered')}"||""]}{stream.regraded::istrue[" • 🖌️ Regraded"||""]}{stream.uncensored::istrue[" • 🌶️ Uncensored"||""]}{stream.unrated::istrue[" • 😈 Unrated"||""]}{stream.folderName::~Open Matte::or::stream.folderName::~Open.Matte::or::stream.folderName::~OpenMatte::or::stream.folderName::~open matte::or::stream.folderName::~open.matte::or::stream.folderName::~openmatte::or::stream.filename::~Open Matte::or::stream.filename::~Open.Matte::or::stream.filename::~OpenMatte::or::stream.filename::~open matte::or::stream.filename::~open.matte::or::stream.filename::~openmatte[" • 🖼️ Open Matte"||""]}
-```
-
 ---
 
 ## 📝 Description Template Changes
@@ -58,18 +53,6 @@ Completely removed the Seadex and RSE tiering logic (🎚️ Best, T1-T8). The t
 The description automatically shows the raw filename (`📄 {stream.filename}`) at the very bottom in **two specific situations** to give you better context:
 1. **For "AI" Releases:** "AI" is a broad term—it could mean AI-upscaled, AI 60fps interpolation, or an AI-generated Open Matte. Printing the filename is the easiest way to let you see exactly what you are clicking on.
 2. **For Unknown Resolutions:** When a file is missing a resolution tag, the filename often holds the missing visual clues (like DV or HDR). Glancing at the raw filename for those clues lets you safely conclude it must be a 4K release.
-
-#### Description Template Code (Copy & Paste):
-```text
-{stream.title::exists["🎬 {stream.title::title} "||""]}{stream.year::exists["({stream.year}) "||""]}{stream.formattedSeasons::exists["🍂 {stream.formattedSeasons} "||""]}{stream.formattedEpisodes::exists["📼 {stream.formattedEpisodes} "||""]}
-{stream.quality::exists["📀 {stream.quality} "||""]}{stream.encode::exists["⚙️ {stream.encode} "||""]}{stream.duration::>0["⏱️ {stream.duration::time} "||""]}
-{stream.audioTags::exists["🎶 {stream.audioTags::join(' | ')} "||""]}{stream.audioChannels::exists["🔊 {stream.audioChannels::join(' | ')} "||""]}{stream.languages::exists["🗣️ {stream.languageEmojis::join(' / ')} "||""]}{stream.subtitles::exists["💬 {stream.subtitleEmojis::join(' / ')} "||""]}
-{stream.size::>0["💾 {stream.size::sbytes} "||""]}{stream.folderSize::>0["📁 {stream.folderSize::sbytes} "||""]}{stream.bitrate::>0["📊 {stream.bitrate::sbitrate} "||""]}{service.cached::isfalse::or::stream.type::=p2p::and::stream.seeders::>0["🌱 {stream.seeders} "||""]}{stream.type::=usenet::and::stream.age::exists["🕰️ {stream.age} "||""]}
-{stream.releaseGroup::exists["🏷️ {stream.releaseGroup} "||""]}{stream.indexer::exists["📡 {stream.indexer} "||""]}{stream.network::exists["🎭 {stream.network} "||""]}
-{service.cached::istrue["⚡ Ready "||""]}{service.cached::isfalse["❌ Not Ready "||""]}{service.id::exists["({service.shortName}) "||""]}{stream.library::istrue["📌 Library "||""]}{stream.type::=Usenet["☁️ Usenet "||""]}{stream.type::=p2p["🔗 P2P "||""]}{stream.type::=http["🌍 Web Link "||""]}{stream.type::=youtube["🟥 Youtube "||""]}{stream.type::=live["📡 Live "||""]}{stream.proxied::istrue["🛡️ Proxied "||""]}{stream.private::istrue["🕵️ Private "||""]}🧩 {addon.name} 
-{stream.message::exists["💡 {stream.message}"||""]}
-{stream.resolution::exists[""||"📄 {stream.filename}"]}{stream.visualTags::~AI["📄 {stream.filename}"||""]}
-```
 
 ---
 
@@ -84,20 +67,39 @@ Download the **`formatter.json`** file from this repository. Open your AIOStream
 <br>
 
 ### Option 2: Copy & Paste
-Copy the large text blocks from the sections above and manually paste them into the Name and Description fields in AIOStreams. *(You can also view the raw `.txt` files in this repository to copy them without formatting!)*
+Copy the large text blocks below and manually paste them into the Name and Description fields in AIOStreams. *(You can also view the raw `.txt` files in this repository to copy them without formatting!)*
+
+**Name Template:**
+```text
+{stream.resolution::exists["{stream.resolution::replace('2160p', '🍿 4K')::replace('1440p','🎟️ 1440p')::replace('1080p','🎫 1080p')::replace('720p','🖥️ 720p')::replace('576p','💿 576p')::replace('480p','📺 480p')::replace('360p','📼 360p')::replace('240p','🧱 240p')::replace('144p','🥔 144p')}"||"❓ Unknown"]}{stream.visualTags::exists["{stream.visualTags::join('')::replace('HDR Color Corrected', 'HDR')::replace('HDRColor Corrected', 'HDR')::replace('Color Corrected', '')::replace('ColorCorrected', '')::replace('10bit', '')::replace('HDR10+', 'HTENP')::replace('HDR10', 'HDR')::replace('HDRHDR', 'HDR')::replace('HTENPHDR', 'HTENP')::replace('HDRHTENP', 'HTENP')::replace('DVHTENP', 'DV')::replace('HTENPDV', 'DV')::replace('DVHDR', 'DV')::replace('HDRDV', 'DV')::replace('SDR', '')::replace('HDR', ' • 🎨 HDR')::replace('HTENP', ' • 🎆 HDR10+')::replace('DV', ' • 🌈 DV')::replace('AI', ' • 🤖 AI')::replace('IMAX', ' • 👁️ IMAX')::replace('3D', ' • 👓 3D')}"||""]}{stream.visualTags::~HDR::or::stream.visualTags::~DV::and::stream.visualTags::~10bit::xor::stream.visualTags::~10bit[" • 🖍️ 10bit"||""]}{stream.editions::exists["{stream.editions::join('')::replace('Color Corrected', '')::replace('ColorCorrected', '')::replace('IMAX', '')::replace('Remastered', 'REMASTERED')::replace('Collectors Edition', 'COLLECTOR')::replace('Collector', 'COLLECTOR')::replace('Anniversary Edition', 'ANNIV')::replace('Anniversary', 'ANNIV')::replace('Extended Edition', 'EXTCUT')::replace('Extended', 'EXTCUT')::replace('Theatrical Cut', 'THEATCUT')::replace('Theatrical', 'THEATCUT')::replace('Directors Cut', 'DIRCUT')::replace('Director', 'DIRCUT')::replace('Uncut', 'UNCUT')::replace('Unrated', 'UNRATED')::replace('Uncensored', 'UNCENS')::replace('COLLECTOR', ' • 📚 Collector')::replace('ANNIV', ' • 🎉 Anniversary Edition')::replace('EXTCUT', ' • 🎞️ Extended')::replace('THEATCUT', ' • 📽️ Theatrical')::replace('DIRCUT', ' • 🎬 Director')::replace('UNCUT', ' • ✂️ Uncut')::replace('UNRATED', ' • 😈 Unrated')::replace('UNCENS', ' • 🌶️ Uncensored')::replace('REMASTERED', ' • 🪄 Remastered')}"||""]}{stream.regraded::istrue[" • 🖌️ Regraded"||""]}{stream.uncensored::istrue[" • 🌶️ Uncensored"||""]}{stream.unrated::istrue[" • 😈 Unrated"||""]}{stream.folderName::~Open Matte::or::stream.folderName::~Open.Matte::or::stream.folderName::~OpenMatte::or::stream.folderName::~open matte::or::stream.folderName::~open.matte::or::stream.folderName::~openmatte::or::stream.filename::~Open Matte::or::stream.filename::~Open.Matte::or::stream.filename::~OpenMatte::or::stream.filename::~open matte::or::stream.filename::~open.matte::or::stream.filename::~openmatte[" • 🖼️ Open Matte"||""]}
+```
+
+**Description Template:**
+```text
+{stream.title::exists["🎬 {stream.title::title} "||""]}{stream.year::exists["({stream.year}) "||""]}{stream.formattedSeasons::exists["🍂 {stream.formattedSeasons} "||""]}{stream.formattedEpisodes::exists["📼 {stream.formattedEpisodes} "||""]}
+{stream.quality::exists["📀 {stream.quality} "||""]}{stream.encode::exists["⚙️ {stream.encode} "||""]}{stream.duration::>0["⏱️ {stream.duration::time} "||""]}
+{stream.audioTags::exists["🎶 {stream.audioTags::join(' | ')} "||""]}{stream.audioChannels::exists["🔊 {stream.audioChannels::join(' | ')} "||""]}{stream.languages::exists["🗣️ {stream.languageEmojis::join(' / ')} "||""]}{stream.subtitles::exists["💬 {stream.subtitleEmojis::join(' / ')} "||""]}
+{stream.size::>0["💾 {stream.size::sbytes} "||""]}{stream.folderSize::>0["📁 {stream.folderSize::sbytes} "||""]}{stream.bitrate::>0["📊 {stream.bitrate::sbitrate} "||""]}{service.cached::isfalse::or::stream.type::=p2p::and::stream.seeders::>0["🌱 {stream.seeders} "||""]}{stream.type::=usenet::and::stream.age::exists["🕰️ {stream.age} "||""]}
+{stream.releaseGroup::exists["🏷️ {stream.releaseGroup} "||""]}{stream.indexer::exists["📡 {stream.indexer} "||""]}{stream.network::exists["🎭 {stream.network} "||""]}
+{service.cached::istrue["⚡ Ready "||""]}{service.cached::isfalse["❌ Not Ready "||""]}{service.id::exists["({service.shortName}) "||""]}{stream.library::istrue["📌 Library "||""]}{stream.type::=Usenet["☁️ Usenet "||""]}{stream.type::=p2p["🔗 P2P "||""]}{stream.type::=http["🌍 Web Link "||""]}{stream.type::=youtube["🟥 Youtube "||""]}{stream.type::=live["📡 Live "||""]}{stream.proxied::istrue["🛡️ Proxied "||""]}{stream.private::istrue["🕵️ Private "||""]}🧩 {addon.name} 
+{stream.message::exists["💡 {stream.message}"||""]}
+{stream.resolution::exists[""||"📄 {stream.filename}"]}{stream.visualTags::~AI["📄 {stream.filename}"||""]}
+```
 
 <br>
 
 ### Option 3: Use Pastebin Links
 You can enter these links directly into your AIOStreams configuration boxes:
 
-**Name Template:**
 [![Name Template Pastebin](https://img.shields.io/badge/Pastebin-Name_Template-blue.svg?style=for-the-badge)](https://pastebin.com/raw/XPehQTCV) 
-`https://pastebin.com/raw/XPehQTCV`
+```text
+https://pastebin.com/raw/XPehQTCV
+```
 
-**Description Template:**
 [![Description Template Pastebin](https://img.shields.io/badge/Pastebin-Description_Template-blue.svg?style=for-the-badge)](https://pastebin.com/raw/n2WPg8Sf)
-`https://pastebin.com/raw/n2WPg8Sf`
+```text
+https://pastebin.com/raw/n2WPg8Sf
+```
 
 ---
 
@@ -106,7 +108,11 @@ You can enter these links directly into your AIOStreams configuration boxes:
 If you found this helpful or useful, I would really appreciate it if you used my Torbox referral link/code! 😊
 
 [![Torbox Referral](https://img.shields.io/badge/Torbox-Referral_Link-success.svg?style=for-the-badge)](https://torbox.app/subscription?referral=58849a2c-cef3-41aa-8f4e-5cd3678a73c8) 
-`https://torbox.app/subscription?referral=58849a2c-cef3-41aa-8f4e-5cd3678a73c8`
+
+**Referral Link:**
+```text
+https://torbox.app/subscription?referral=58849a2c-cef3-41aa-8f4e-5cd3678a73c8
+```
 
 **Referral Code:** 
 ```text
